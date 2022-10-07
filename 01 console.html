@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // możemy wypisywać teskty, liczby itp.
+      console.log("Witaj świecie");
+
+      // możemy wypisać obiekt i go zbadać
+      console.log(window);
+
+      // po przecinku możemy wypisać kilka elementów na raz
+      console.log("Witaj", window, 100);
+
+      // bardzo często będziemy chcieli wypisać element by go zbadać
+      // gdy wypiszemy element pobrany ze strony, w konsoli pokaże nam tylko html znacznika
+      // gdy chcemy wypisać więcej detali o tym obiekcie to użyjemy console.dir
+
+      // pokaże w konsoli ładnie sformatowaną tabelę
+      console.tabe([1, 2, 3, 4, 5]);
+
+      // grupowanie wielu tekstów (console.log etc) w konsoli w jedną grupę
+      console.log("Nazwa grupy");
+      console.log("ALa ma kota");
+      console / log("Kot ma Alę");
+      console.groupEnd(); // kończenie grupy
+
+      console.groupCollapsed("Nazwa grupy"); // grupa domyślna zwinięta
+      console.log("Ala ma kota");
+      console.log("Kot ma Alę");
+      console.groupEnd(); // kończenie grupy
+
+      // czsami będziemy chcieli sprawdzić jak szybko wykona się nasz skrypt.
+      console.time("test 1"); // rozpoczyna tekst - zaczyna liczyć czas
+      for (let i = 0; i < 10000; i++) console.timeEnd("test 1"); // kończymy test
+
+      // czsami też będziemy chcieli zatrzymać na chwilę działanie ksryptu w danym miejscu
+      function test() {
+        let i = 0;
+        debugger; // instrukcją debugger przerywam działanie skryptu w tym miejscu,
+        // dzięki czemu mogę spokojnie go badać w zakładce Source
+        // dodatkowo w konsoli mam dostęp do zmiennych z danego scope - np je tam wpisując
+      }
+      test();
+
+      const myArr = [];
+
+      // zamiast
+      console.log("Moja tablica: " + myArr);
+
+      // lepiej użyć
+      console.log("Moja tablica:", myArr);
+
+      // lub
+      console.log({ myArr: myArr });
+
+      let zm = "Ania ma kota";
+      console.log(zm); // zaznaczam zm (2x klik na nazwę) i naciskam {
+      console.log({ zm }); //{zm : "Ania ma kota"}
+
+      console.log("Jestem zwykłym tekstem w konsoli");
+      console.log(
+        "%cJestem zwykłym tekstem w konsoli",
+        "font-weight: bold; color: rebeccapurple; font-size: 30px; background: gold;"
+      );
+      console.log("Kot %s lubi się bawić", "Rysiek"); // kot Rysiek lubi się bawić
+      console.log("Cena tego produktu to %dzł", 120); // cena tego produktu to 120zł
+      console.log(
+        "%cCena tego produktu to %dzł",
+        "color: red; font-weight: bold",
+        120
+      );
+    </script>
+  </body>
+</html>
