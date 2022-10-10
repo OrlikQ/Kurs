@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+                                                                        const nr = prompt("Podaj jakąś liczbę");
+
+                                                                        if (nr > 20) {
+                                                                          //jeżeli...
+                                                                          console.log("Liczba jest większa od 20");
+                                                                        } else {
+                                                                          //w przeciwnym razie...
+                                                                          console.log("Liczba jest mniejsza lub równa 20");
+                                                                        }
+                                                                        // Wynik sprawdzenia
+                                                                        const a = 10;
+                                                                        const b = 20;
+
+                                                                        console.log(b > a); //true
+                                                                        console.log(b < a); //false
+                                                                        console.log(b === a); //false
+
+                                                                        const result = a > b;
+                                                                        console.log(result); //false
+
+                                                                        if ("7" > 5) {
+                                                                          console.log(`Liczba 7 jest większa od 5`);
+                                                                        }
+
+                                                                        console.log("ab" > "aa"); //true
+                                                                        console.log("pies" > "kot"); //true
+                                                                        console.log("abc" > "acc"); //false
+                                                                        console.log("alicja" > "bela"); //false
+                                                                        console.log("Marcin" > "Ania"); //true - znaczy lepszy
+
+                                                                        console.log("a" > "A"); //true
+                                                                        console.log("Kot" > "kot"); //false
+
+                                                                        //dlatego warto przed konwersją zrównać wielkość liter
+                                                                        console.log("alicja" > "Beata"); //true
+
+                                                                        console.log("3" > 2); //true bo 3 > 2
+                                                                        console.log("02" > 3); //false bo 2 > 3
+                                                                        console.log("0" == 0); //true
+
+                                                                        console.log(true > 2); //false bo true to 1
+                                                                        console.log(false < 2); //true bo false to 0
+
+                                                                        console.log("Ala" > 0); //false bo konwersja "Ala" na liczbę to NaN (not a number), a NaN jest mniejsze od każdej liczby
+                                                                        console.log("Kot" > -Infinity); //false - to samo co powyżej. NaN jest mniejsze od każdej liczby
+
+                                                                        // Wartości falsy
+
+                                                                        if (false) {
+                                                                        }
+                                                                        if (null) {
+                                                                        }
+                                                                        if (undefined) {
+                                                                        }
+                                                                        if (0) {
+                                                                        }
+                                                                        if (NaN) {
+                                                                        }
+                                                                        if ("") {
+                                                                        }
+                                                                        if (document.all) {
+                                                                        }
+
+                                                                        if (a) {
+                                                                          //to się wykona bo a !== 0
+                                                                          console.log("A ma wartość ", a);
+                                                                        }
+                                                                        if (b) {
+                                                                          //to się nie wykona bo b === 0
+                                                                          console.log("B ma wartość ", b);
+                                                                        }
+                                                                        if (c) {
+                                                                          //to się nie wykona bo null
+                                                                          console.log("C ma wartość ", c);
+                                                                        }
+                                                                        if (false) {
+                                                                          //to się nie wykona bo false to false
+                                                                        }
+
+                                                                        Boolean(false); //false
+                                                                  Boolean(null); //false
+                                                                  Boolean(undefined); //false
+                                                                  Boolean(0); //false
+                                                                  Boolean(NaN); //false
+                                                                  Boolean(""); //false
+                                                                  Boolean(document.all); //false
+
+                                                                  Boolean("Ala"); //true
+                                                                  Boolean(2); //true
+                                                                  Boolean(2-2); //false
+
+                                                                  const x;
+                                                                  Boolean(x); //false bo x nie ma wartości czyli undefined
+
+                                                                  if (nr) { //kod się wykona jeżeli wartość liczby nr jest różna od falsy
+                                                            }
+
+                                                            const txt = "Ala ma kota";
+                                                            if (txt.length) { //sprawdzam długość tekstu. Jeżeli większa od 0 to true
+
+                                                            }
+
+                                                            const tab = []
+                                                            if (tab.length) { //podobnie sprawdzam długość tablicy
+
+                                                            }
+
+                                                            // Instrukcja if
+                                                            const nr = Math.random() * 10;
+
+                                                      if (nr > 5) {
+                                                          console.log("Liczba nr jest większa od 5");
+                                                      }
+                                                      const nr = Math.random() * 10;
+
+                                                if (nr >= 5) {
+                                                    console.log("Liczba nr jest większa lub równa 5");
+                                                } else {
+                                                    console.log("Liczba nr jest mniejsza od 5");
+                                                }
+                                                const name = "Marcin";
+
+                                          if (name === "Marcin") {
+                                              console.log("Marciny są fajne");
+                                          } else if (name === "Ania") {
+                                              console.log("Anie są fajne");
+                                          } else if (name === "Radosław") {
+                                              console.log("Radki są fajne");
+                                          } else {
+                                              console.log("Nie wiem kto jest fajny");
+                                          }
+
+
+                                          const name = "Marcin";
+
+                                          if (name === "Marcin") {
+                                              console.log("Marciny są fajne");
+                                          } else if (name === "Ania") {
+                                              console.log("Anie są fajne");
+                                          } else if (name === "Radosław") {
+                                              console.log("Radki są fajne");
+                                          } else {
+                                              console.log("Nie wiem kto jest fajny");
+                                          }
+
+                                          const x = 1;
+                                    const y = 2;
+
+                                    if (x > 0) {
+                                        if (y > 0) {
+                                           //jeżeli x > 0 i y > 0
+                                        }
+                                    }
+
+                                    //to samo co powyżej
+                                    if (x > 0 && y > 0) {
+                                        //kod wykonywany jeżeli liczba > 0 i druga_liczba > 0
+                                    }
+
+                                    // Operator warunkowy
+
+                                    const x = (wyrażenie) ? jeżeli_true : jeżeli_false
+                              const i = 1;
+
+                              let number = "";
+                              if (i > 0) {
+                                  number = "dodatnia";
+                              } else {
+                                  number = "ujemna";
+                              }
+
+
+                              //to samo tylko w skróconej wersji
+                              const number = (i > 0)? "dodatnia" : "ujemna";
+
+                              const x = 23;
+                        const isEven = (x % 2 === 0)? "parzysta" : "nieparzysta";
+                        console.log(isEven); //"nieparzysta"
+
+                        const age = 21;
+                        const status = (age < 18) ? "jesteś za młody" : "zapraszamy na seans";
+                        console.log(status); //"zapraszamy na seans"
+
+                        const name = "Ola";
+                        console.log( (name === "Ola") ? "Masz na imię Ola" : "Nie masz na imię Ola" ) //"Masz na imię Ola"
+
+                        const nr = 10;
+                        const answer = nr ? "yes" : "no";
+                        console.log(answer);
+
+                        const isMember = true;
+                        console.log( `Koszt usługi to ${ (isMember ? "2.00" : "10.00") }zł` );
+
+                        const animal = prompt("Wpisz jakiego masz zwierzaka");
+
+                  switch (animal) {
+                      case "pies":
+                          console.log("Psy są najlepsze");
+                          break;
+                      case "kot":
+                          console.log("Koty są lepsze od psów");
+                          break;
+                      case "chomik":
+                          console.log("Każdy chomik jest super");
+                          break;
+                      default:
+                          console.log("Jakiś dziwny ten zwierzak");
+                  }
+
+                  const car = "bmw";
+
+            switch (car) {
+                case "bmw" : ... break;
+                case "fiat" : ... break;
+                case "audi" : ... break;
+            }
+
+            //poniższe przyrównywanie nie zadziała
+            const nr = 5;
+            switch (nr) {
+                case (nr <= 5):
+                    console.log("Mało");
+                break;
+                case (nr > 5 && nr <= 10):
+                    console.log("Średnio");
+                break;
+                case (nr > 15) :
+                    console.log("Dużo");
+                break;
+            }
+
+            const nr = 5;
+
+      switch (true) {
+          case (nr <= 5):
+              console.log("Mało");
+          break;
+          case (nr > 5 && nr < 10):
+              console.log("Średnio");
+          break;
+          case (nr >= 10) :
+              console.log("Dużo");
+          break;
+      }
+    </script>
+  </body>
+</html>
