@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // tworzenie nowej tablicy
+      const tab = []; //pusta tablica
+
+      const tab2 = [1, 2, 3, 4];
+
+      const tab3 = ["Marcin", "Ania", "Agnieszka"];
+
+      const a = "ALA";
+      const b = 234;
+      const c = "PIES";
+
+      const tab = [a, b, c, "KOT", {}]; //tablica z 5 elementami. Mogą to być oddzielne zmienne, ale też wartości wpisane bezpośrednio w tablicy
+
+      const tab = new Array(10);
+      console.log(tab); //[blank x 10]
+
+      const tab = new Array("Ala", "Bala", "Cala"); //gdy podamy więcej wartości staną się one elementami tablicy
+      console.log(tab); //["Ala", "Bala", "Cala"]
+
+      const tab = ["Ala", "ma", "rudego", "kota"];
+
+      console.log(tab[0]); //Ala
+      console.log(tab[1]); //ma
+      console.log(tab[2]); //rudego
+      console.log(tab[3]); //kota
+      console.log(tab[tab.length - 1]); //ostatni element - kota
+
+      const tab = ["Ala", "ma", "rudego", "kota"];
+      tab.at(0); //Ala
+      tab.at(1); //ma
+      tab.at(2); //rudego
+      tab.at(-1); //kota
+      tab.at(-2); //rudego
+
+      // właściwość length
+      //indeks:       0         1         2
+      const tab = ["Marcin", "Ania", "Agnieszka"];
+
+      console.log(tab.length); //3
+      console.log(tab[tab.length - 1]); //Agnieszka
+
+      for (let i = 0; i < tab.length; i++) {
+        console.log(tab[i]);
+      }
+
+      // dodawanie elementów do tablicy
+      const tab = ["Marcin", "Ania", "Agnieszka"];
+      tab.push("Piotrek");
+      console.log(tab); //[Marcin, Ania, Agnieszka, Piotrek]
+
+      tab.push("Y", "Z");
+      console.log(tab); //[Marcin, Ania, Agnieszka, Piotrek, Y, Z]
+
+      const tab = ["Marcin", "Ania", "Agnieszka"];
+
+      tab[3] = "Piotrek";
+      //lub
+      tab[tab.length] = "Piotrek";
+
+      console.log(tab); //[Marcin, Ania, Agnieszka, Piotrek]
+
+      // czy tablica jest tablicą?
+      const tab = ["ala", "bala"];
+      const ob = { name: "Piotr" };
+
+      console.log(Array.isArray(tab)); //true
+      console.log(Array.isArray(ob)); //false
+
+      console.log(typeof tab); //"object";
+      console.log(typeof ob); //"object";
+
+      // metody push() i pop()
+      const tab = ["Marcin", "Ania", "Agnieszka"];
+      tab.push("Grzegorz");
+      console.log(tab); //["Marcin", "Ania", "Agnieszka", "Grzegorz"]
+      tab.push("Piotr", "Karol");
+      console.log(tab); //["Marcin", "Ania", "Agnieszka", "Grzegorz", "Piotr", "Karol"]
+
+      const tab = ["Marcin", "Ania", "Agnieszka"];
+      const last = tab.pop();
+
+      console.log(last); //Agnieszka
+      console.log(tab); //[Marcin, Ania]
+
+      // metody unshift() i shift()
+      const tab = ["Marcin", "Ania", "Agnieszka"];
+      tab.unshift("Bartek");
+      console.log(tab); //[Bartek, Marcin, Ania, Agnieszka]
+      tab.unshift("Piotrek", "Paweł");
+      console.log(tab); //[Piotrek, Paweł, Bartek, Marcin, Ania, Agnieszka]
+
+      const tab = ["Marcin", "Ania", "Agnieszka"];
+      const first = tab.shift();
+
+      console.log(tab); //[Ania, Agnieszka]
+      console.log(first); //Marcin
+
+      // funkcja join()
+      const ourTable = ["Marcin", "Ania", "Agnieszka"];
+
+      console.log(ourTable.join()); //Marcin,Ania,Agnieszka
+
+      console.log(ourTable.join(" - ")); //Marcin - Ania - Agnieszka
+
+      console.log(ourTable.join(" <--> ")); //Marcin <--> Ania <--> Agnieszka
+
+      //zliczam liczbę liter w tablicy
+      const cars = ["Mercedes", "Audi", "BMW"];
+      console.log(cars.join("").length); //15
+
+      // zamiana tekstu na tablicę
+      const txt = "kartofel";
+      const tab = [...txt];
+      console.log(tab); //["k", "a", "r", "t", "o", "f", "e", "l"]
+
+      const txt = "Ala ma kota";
+      const tab = txt.split(" ");
+      console.log(tab); //["Ala", "ma", "kota"];
+
+      // funkcja reverse()
+      const tab = [1, 2, 3, 4];
+      tab.reverse();
+      console.log(tab); //[4, 3, 2, 1]
+      const word = "kajak";
+      const tab = [...word];
+      console.log(tab.reverse().join("") === tab.join("")); //true czyli palindrom
+
+      // metody indexOf(), lastIndexOf() i includes()
+      const tab = ["Marcin", "Ania", "Agnieszka", "Monika"];
+
+      console.log(tab.indexOf("Agnieszka")); //2
+      console.log(tab.indexOf("Karolina")); //-1
+
+      if (tab.indexOf("Ania") !== -1) {
+        console.log(
+          "Ania występuje w tablicy pod indexem",
+          tab.indexOf("Ania")
+        );
+      }
+
+      const tab = ["Agnieszka", "Marcin", "Ania", "Agnieszka", "Monika"];
+      console.log(tab.lastIndexOf("Agnieszka")); //3;
+
+      //bardziej realny przykład
+      const paginationButtons = [
+        ...document.querySelectorAll(".pagination-btn"),
+      ];
+
+      paginationButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const index = buttons.indexOf(btn);
+          showSlide(index);
+        });
+      });
+
+      // funkcja sort()
+      const tab = ["Marcin", "Ania", "Piotrek", "Grześ"];
+      tab.sort();
+      console.log(tab); //["Ania", "Grześ", "Marcin", "Piotrek"]
+
+      const tab = [1, 2, 21, 2.1, 32, 3.1];
+      tab.sort();
+
+      console.log(tab); //[ 1, 2, 2.1, 21, 3.1, 32 ]
+
+      const tab = ["Bartek", "ania", "Celina", "agnieszka"];
+      tab.sort();
+
+      console.log(tab); //["Bartek", "Celina", "agnieszka", "ania"]
+
+      function mySort(a, b) {}
+
+      tab.sort(mySort);
+
+      function compare(a, b) {
+        if (a < b) {
+          return -1;
+        }
+        if (a > b) {
+          return 1;
+        }
+        return 0;
+      }
+
+      tab.sort(compare);
+    </script>
+  </body>
+</html>
