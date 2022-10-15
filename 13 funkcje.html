@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // deklaracja funkcji
+      function pomnoz(nr) {
+        return nr * nr;
+      }
+      // wywołanie funkcji
+      //   nazwaFunkcji(2); // 4
+      //   nazwaFunkcji(4); // 12
+      //   nazwaFunkcji(6); // 36
+
+      function writeText(name, age) {
+        console.log(`${name} jest w trzeciej klasie i ma ${age} lat`);
+      }
+      writeText("Mateusz", 17);
+      writeText("Artur");
+      writeText();
+
+      function dodaj3Funkcja(a) {
+        return a + 3;
+      }
+      //   const result = dodaj3Funkcja(4);
+      //   console.log(pomnoz(result));
+
+      function dodajString(a) {
+        return `Ala ma  ${a}`;
+      }
+      const result = dodajString("Świnie");
+      console.log(result);
+
+      console.log(`${result} ${dodaj3Funkcja(2)}`);
+
+      const kupa = dodajString("kupa");
+      const but = "Ala ma kupe";
+
+      function dodajStringDoLiczby(string, liczba) {
+        return string + liczba;
+      }
+      const wynik = dodajStringDoLiczby("złoto", 7);
+      console.log(dodajString(wynik));
+    </script>
+  </body>
+</html>

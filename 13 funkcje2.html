@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function dodaj15Funkcja(a) {
+        return a + 5;
+      }
+
+      const wynikdodania = dodaj15Funkcja(15);
+      console.log(wynikdodania);
+
+      function dodajString(a) {
+        return `Asg jest  ${a}`;
+      }
+      const dodanieslowa = dodajString("Super");
+      console.log(dodanieslowa);
+
+      function dodaj140Funkcja(a) {
+        return a + 270;
+      }
+      const result = dodaj140Funkcja(140);
+      console.log(result);
+
+      function dodaj90Funkcja(a) {
+        return a + 110;
+      }
+      const dodawanie = dodaj90Funkcja(90);
+      console.log(dodawanie);
+
+      function dodajSlowko(a) {
+        return `Manchester United jest ${a}`;
+      }
+      const klub = dodajSlowko("najlepszy");
+      console.log(klub);
+
+      function dodajS(a) {
+        return `Wz93 jest najlepszym ${a}`;
+      }
+      const mundur = dodajS("mundurem");
+      console.log(mundur);
+
+      function ksiazkiNaval(a) {
+        return "Książki Navala" + a;
+      }
+      const nav = ksiazkiNaval(" są super ");
+      console.log(nav);
+
+      function jwG(a) {
+        return "JW Grom to jedna z najlepszych" + a;
+      }
+      const jwgrom = jwG(" jednostek na świecie ");
+      console.log(jwgrom);
+
+      function gromWzatoce(a) {
+        return "Grom był w " + a;
+      }
+      const zatoka = gromWzatoce("zatoce Perskiej");
+      console.log(zatoka);
+
+      function dodaj530Funkcja(a) {
+        return a + 770;
+      }
+      const wyniczek = dodaj530Funkcja(530);
+      console.log(wyniczek);
+
+      function pomnoz5Funkcja(a) {
+        return a * 5;
+      }
+      const mnozenie = pomnoz5Funkcja(10);
+      console.log(mnozenie);
+
+      function podziel12Funkcja(a) {
+        return a / 2;
+      }
+      const dzielenie = podziel12Funkcja(12);
+      console.log(dzielenie);
+
+      console.log(`${wyniczek} ${dodaj530Funkcja(530)}`);
+
+      function johhnySilverhand(a) {
+        return "Johnny to" + a;
+      }
+      const cyberpunk = johhnySilverhand(" najlepsza postać ");
+      console.log(cyberpunk);
+
+      function calculateBMI(weight, height) {
+        return (weight / (height * height)).toFixed(2);
+      }
+      const myBMI = calculateBMI(68, 1.91);
+      console.log(myBMI);
+
+      function showBMIResult(bmi) {
+        // if (bmi >= 18.5 && bmi <= 24.9) {
+        //   return "Jest dobre";
+        // } else if (bmi < 18.5) {
+        //   return "Masz niedowage";
+        // } else if (bmi >= 25 && bmi <= 29.9) {
+        //   return "Masz nadwage";
+        // } else {
+        //   return "Masz otyłość";
+        // }
+
+        console.log(typeof bmi, bmi >= 18.5 && bmi <= 24.9);
+        switch (true) {
+          case bmi >= 18.5 && bmi <= 24.9:
+            return "Jest dobre";
+
+          case bmi < 18.5:
+            return "Masz niedowage";
+
+          case bmi >= 25 && bmi <= 29.9:
+            return "Masz nadwage";
+
+          case bmi > 29.9:
+            return "Masz otyłość";
+        }
+      }
+      console.log(showBMIResult(Number(myBMI)));
+    </script>
+  </body>
+</html>

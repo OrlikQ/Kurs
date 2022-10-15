@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  for (zainicjowanie_zmiennych;  warunek_kończący_wykonywanie_pętli;  zmiana_zmiennych) {
+      //  kod który zostanie wykonany pewną ilość razy
+      // }
+
+      //   for (let i = 100; i > 0; i--) {
+      //     console.log(`Nie będe rozmawiał na lekcjach ${i}`);
+      //   }
+
+      //   for (let i = 0; i < 100; i++) {
+      //     console.log(`Nie będe rozmawiał na lekcjach ${i}`);
+      //   }
+
+      //   let i = 1;
+
+      //     while (i <= 60) {
+      //       console.log("Będę...");
+      //       i++;
+      //     }
+
+      for (let i = 0; i < 10; i++) {
+        console.log("%c Główna pętla nr: " + i, "color:red");
+
+        for (let j = 0; j < 8; j++) {
+          console.log("%c Pętla wewnetrzna nr: " + j, "color:blue");
+        }
+      }
+    </script>
+  </body>
+</html>
